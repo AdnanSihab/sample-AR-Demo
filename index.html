@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Model Showcase</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7fb;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: #ffffff;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    nav {
+      margin: 10px 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #4b5fba;
+      color: #f4f7fb;
+      transform: scale(1.1);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .section {
+      margin-top: 50px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    .model-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    model-viewer {
+      width: 100%;
+      max-width: 300px;
+      height: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+
+    footer a {
+      color: #1e3a8a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AR Model Showcase</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#models">Models</a>
+      <a href="#about">About Us</a>
+    </nav>
+  </header>
+
+  <div id="home" class="container">
+    <h2>Welcome to the AR Model Showcase</h2>
+    <p>Explore our collection of 3D models available in augmented reality.</p>
+  </div>
+
+  <div id="models" class="container section">
+    <h2>Explore Our Models</h2>
+
+    <!-- Furniture Models Section -->
+    <div class="model-category">
+      <h3>Furniture</h3>
+      <div class="model-container">
+        <!-- Model 1: Couch -->
+        <model-viewer
+          src="Models/furniture/couch.glb"
+          alt="3D model of a couch"
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          camera-controls
+          auto-rotate>
+        </model-viewer>
+        <!-- Model 2: Table -->
+        <model-viewer
+          src="Models/furniture/table.glb"
+          alt="3D model of a table"
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          camera-controls
+          auto-rotate>
+        </model-viewer>
+      </div>
+    </div>
+
+    <!-- Home Appliances Models Section -->
+    <div class="model-category">
+      <h3>Home Appliances</h3>
+      <div class="model-container">
+        <!-- Model 1: Blender -->
+        <model-viewer
+          src="Models/home-appliances/TV.glb"
+          alt="3D model of a TV"
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          camera-controls
+          auto-rotate>
+        </model-viewer>
+        <!-- Model 2: Microwave -->
+        <model-viewer
+          src="Models/home-appliances/microwave.glb"
+          alt="3D model of a microwave"
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          camera-controls
+          auto-rotate>
+        </model-viewer>
+      </div>
+    </div>
+
+    <!-- Gadgets Models Section -->
+    <div class="model-category">
+      <h3>Gadgets</h3>
+      <div class="model-container">
+        <!-- Model 1: Smartphone -->
+        <model-viewer
+          src="Models/gadgets/smartphone.glb"
+          alt="3D model of a smartphone"
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          camera-controls
+          auto-rotate>
+        </model-viewer>
+        <!-- Model 2: Headphones -->
+        <model-viewer
+          src="Models/gadgets/Clock.glb"
+          alt="3D model of Wall Clock"
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          camera-controls
+          auto-rotate>
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="container section">
+    <h2>About Us</h2>
+    <p>We showcase high-quality 3D models that you can explore in augmented reality.</p>
+  </div>
+
+  <footer>
+    <p>Made for <a href="https://holmeslab.xyz/" target="_blank">Holmes Lab</a></p>
+  </footer>
+</body>
+</html>
